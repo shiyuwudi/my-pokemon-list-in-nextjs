@@ -24,3 +24,52 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.pokemon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.pokemon-id {
+    font-size: 1rem;
+  color: #666;
+}
+
+.pokemon-type-list-item-btn.active {
+  @apply bg-blue-400 text-white;
+}
+.pokemon-type-list-item-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-weight: bold;
+  @apply border p-4 m-2 cursor-pointer;
+}
+
+.pokemon-pagination-btn {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    @apply p-4 m-2 cursor-pointer bg-blue-400 rounded-lg text-white;
+}
+
+.pokemon-pagination {
+  @apply flex items-center gap-2 justify-center ;
+}
