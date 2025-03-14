@@ -1,11 +1,14 @@
-import Image from "next/image";
+// import Image from "next/image";
 import World from "@/app/components/World";
+import {Suspense} from "react";
 
 export default function Home() {
   return (
     <div>
       <main >
-        <World />
+        <Suspense fallback={<div>Loading...</div>}>
+          <World />
+        </Suspense>
         {/*<Image*/}
         {/*  className="dark:invert"*/}
         {/*  src="/next.svg"*/}
